@@ -2,8 +2,8 @@ import csv
 
 # Define the data for individuals
 people_data = [
-    {"First Name": "Harsh", "Last Name": "Kathiriya", "Address": "200 Vine Street, Waynesboro, VA-22980", "SSN": "123-45-6789"},
-    {"First Name": "Keerti", "Last Name": "Kathiriya", "Address": "15 Sleaford Green, Watford, England, WD19-7EB", "SSN": "NA"},
+    {"First Name": "Harsh", "Last Name": "Kathiriya", "Address": "1 Fayer Court, Henbury Way, Watford, WD197EL", "SSN": "123-45-6789", "DOB": "06/07/1997"},
+    {"First Name": "Keerti", "Last Name": "Kathiriya", "Address": "15 Sleaford Green, Watford, England, WD19-7EB", "SSN": "NA", "DOB": "12/05/1997"},
     {"First Name": "Jhanvi", "Last Name": "Ghadia", "Address": "200 vine street, waynesboro, VA-22980", "SSN": "987-65-4321"},
     {"First Name": "Daksh", "Last Name": "Ghadia", "Address": "200 vine street, waynesboro, VA-22980", "SSN": "987-65-4321"},
     {"First Name": "Ajay", "Last Name": "Madhani", "Address": "9 bele-grene dr Fishershville, VA-22980", "SSN": "987-65-4321"},
@@ -21,10 +21,3 @@ people_data = [
 
 # Specify the CSV file name
 csv_file = "person_info.csv"
-
-# Write the data to the CSV file
-with open(csv_file, mode='w', newline='') as file:
-    writer = csv.DictWriter(file, fieldnames=["First Name", "Last Name", "Address", "SSN"])
-    writer.writeheader()
-    writer.writerows(people_data)
-print("CSV file created successfully.")
